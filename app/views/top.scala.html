@@ -1,0 +1,15 @@
+@(entries: List[Entry])
+
+@import helper._
+
+@main("entry list") {
+
+<h1>@entries.size entry(s)</h1>
+<ul>
+    @entries.map {
+        entry =>
+            <li>@entry.content</li>
+    }
+</ul>
+
+}
